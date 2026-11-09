@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#16120b">
+  <meta name="description" content="Do you think the Fortnite Pirate Shop token is real?">
+  <meta property="og:title" content="Is the Fortnite Pirate Shop Token Real?">
+  <meta property="og:description" content="One question. What do you think?">
+  <meta property="og:image" content="pirate-token.png">
+  <meta property="og:type" content="website">
+  <title>Is the Fortnite Pirate Shop Token Real?</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #11131b;
+      color: #f7f4ef;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100dvh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      background:
+        radial-gradient(ellipse at 50% 0%, #59401d 0, transparent 48%),
+        radial-gradient(ellipse at 90% 100%, #222b46 0, transparent 45%),
+        #11131b;
+    }
+
+    main {
+      width: min(100%, 620px);
+      height: calc(100dvh - 32px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(12px, 2.5vh, 22px);
+    }
+
+    .token-logo {
+      width: clamp(104px, 24vw, 150px);
+      height: clamp(104px, 24vw, 150px);
+      margin: 0 auto;
+      overflow: hidden;
+      border: 2px solid #f8cc58;
+      border-radius: 50%;
+      background: #e7ae31;
+      box-shadow: 0 0 48px #ffcf5a55, 0 12px 36px #0007;
+    }
+
+    .token-logo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card {
+      padding: clamp(24px, 6vh, 48px) clamp(20px, 6vw, 44px);
+      border: 1px solid #ffffff24;
+      border-radius: 28px;
+      background: #181a24ef;
+      box-shadow: 0 28px 100px #0008;
+      text-align: center;
+    }
+
+    .brand {
+      margin: 0 0 20px;
+      color: #f8cc58;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 7vw, 4.3rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .intro {
+      margin: 18px auto 0;
+      color: #c1bdca;
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    button {
+      min-width: 138px;
+      min-height: 50px;
+      padding: 12px 24px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    button:focus-visible {
+      outline: 3px solid #ffe08a;
+      outline-offset: 4px;
+    }
+
+    .answer {
+      background: #f8cc58;
+      color: #241a08;
+    }
+
+    .answer.secondary {
+      border-color: #51465a;
+      background: #24232d;
+      color: #f7f4ef;
+    }
+
+    .result {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      width: 100vw;
+      min-height: 100vh;
+      min-height: 100dvh;
+      place-items: center;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: #000;
+    }
+
+    .result[hidden] {
+      display: none;
+    }
+
+    .jump-scare-video {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      background: #000;
+      object-fit: cover;
+    }
+
+    .playback-message {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
+      margin: 0;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 1px 5px #000;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <figure class="token-logo">
+      <img src="pirate-token.png" alt="Golden pirate shop token logo">
+    </figure>
+
+    <section class="card" id="question">
+      <p class="brand">isfortnitetokenreal</p>
+      <h1>Do you think the Fortnite Pirate Shop token is real?</h1>
+      <p class="intro">Pick a side. This fan-made page is not affiliated with Epic Games.</p>
+      <div class="actions">
+        <button class="answer" id="yes" type="button">Yes</button>
+        <button class="answer secondary" id="no" type="button">No</button>
+      </div>
+    </section>
+
+    <section class="result" id="surprise" aria-live="polite" hidden>
+      <video
+        class="jump-scare-video"
+        id="jump-scare-video"
+        loop
+        playsinline
+        preload="auto"
+        controlslist="nodownload noplaybackrate noremoteplayback"
+        disablepictureinpicture
+        disableremoteplayback
+      >
+        <source src="jumpscare-long.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+      </video>
+      <p class="playback-message" id="playback-message" role="status"></p>
+    </section>
+  </main>
+
+  <script>
+    const question = document.getElementById("question");
+    const surprise = document.getElementById("surprise");
+    const video = document.getElementById("jump-scare-video");
+    const playbackMessage = document.getElementById("playback-message");
+
+    function showSurprise() {
+      question.hidden = true;
+      surprise.hidden = false;
+      playbackMessage.textContent = "";
+      video.controls = false;
+      video.loop = true;
+      video.currentTime = 0;
+      video.muted = false;
+      video.volume = 1;
+
+      let fullscreenRequest;
+      try {
+        if (document.documentElement.requestFullscreen) {
+          fullscreenRequest = document.documentElement.requestFullscreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+          fullscreenRequest = Promise.resolve();
+        } else {
+          fullscreenRequest = Promise.reject(new Error("Fullscreen unavailable"));
+        }
+      } catch (error) {
+        fullscreenRequest = Promise.reject(error);
+      }
+
+      video.play().catch(() => {
+        playbackMessage.textContent =
+          "The video couldn't start. Please reload the page and try again.";
+      });
+
+      Promise.resolve(fullscreenRequest).catch(() => {
+        // Keep the full-page video visible when native fullscreen is unavailable.
+      });
+    }
+
+    document.getElementById("yes").addEventListener("click", showSurprise);
+    document.getElementById("no").addEventListener("click", showSurprise);
+  </script>
+</body>
+</html>
